@@ -3,7 +3,7 @@
 ## Usage
 
 ```javascript
-const WYR = require("would-you-rather");
+const WYR = require("either-wyr");
 
 WYR({ comments: true }).then(console.log); // { ..., comments: [{}, {}, {}] }
 WYR().then(console.log); // { ... }

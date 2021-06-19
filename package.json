@@ -1,7 +1,7 @@
 {
   "name": "either-wyr",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple WouldYouRather generator from either.io",
   "main": "index.js",
   "engines": {
     "node": ">= 12"
