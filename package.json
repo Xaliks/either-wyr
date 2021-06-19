@@ -1,0 +1,32 @@
+{
+  "name": "either-wyr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xaliks/Would-You-Rather.git"
+  },
+  "keywords": [
+    "wyr",
+    "wouldyourather",
+    "would-you-rather",
+    "either.io",
+    "either",
+    "cheerio"
+  ],
+  "author": "Xaliks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xaliks/Would-You-Rather/issues"
+  },
+  "homepage": "https://github.com/Xaliks/Would-You-Rather#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "node-fetch": "^2.6.1"
+  }
+}
