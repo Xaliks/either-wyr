@@ -26,16 +26,19 @@ WouldYouRather().then(console.log); // [Question]
   commentCount: Number,
   createdAt: Date,
   updatedAt: Date,
+	totalVotes: Number,
   options: [
     {
       type: "blue",
       question: String,
-      voteCount: Number
+      voteCount: Number,
+			percentage: String,
     },
     {
       type: "red",
       question: String,
-      voteCount: Number
+      voteCount: Number,
+			percentage: String,
     }
   ],
   author: {
@@ -43,7 +46,7 @@ WouldYouRather().then(console.log); // [Question]
     name: String,
     isDeleted: Boolean,
     url: String,
-    email: String | null
+    email: String | null,
   },
   tags: [
     {
@@ -52,8 +55,8 @@ WouldYouRather().then(console.log); // [Question]
       slug: String,
       url: String,
       createdAt: Date,
-    }
-  ]
+    },
+  ],
 }
 ```
 
@@ -72,16 +75,19 @@ WouldYouRather().then(console.log); // [Question]
 		"commentCount": 1337,
 		"createdAt": "2009-10-08T20:22:43.000Z",
 		"updatedAt": "2009-10-08T22:05:30.000Z",
+		"totalVotes": 246912,
 		"options": [
 			{
 				"type": "blue",
 				"question": "Be very fat",
-				"voteCount": 123456
+				"voteCount": 123456,
+				"percentage": "50.00"
 			},
 			{
 				"type": "red",
 				"question": "Be very thin",
-				"voteCount": 123456
+				"voteCount": 123456,
+				"percentage": "50.00"
 			}
 		],
 		"author": {
