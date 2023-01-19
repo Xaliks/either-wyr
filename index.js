@@ -18,16 +18,19 @@ async function getQuestions(options = { count: 1 }) {
       commentCount: parseInt(question.comment_total) || 0,
       createdAt: new Date(parseInt(question.created_on) * 1000),
       updatedAt: new Date(parseInt(question.updated_on) * 1000),
+      totalVotes: parseInt(question.option1_total) + parseInt(question.option2_total),
       options: [
         {
           type: "blue",
           question: question.option_1,
           voteCount: parseInt(question.option1_total),
+          percentage: (parseInt(question.option1_total) / (parseInt(question.option1_total) + parseInt(question.option2_total)) * 100).toFixed(2),
         },
         {
           type: "red",
           question: question.option_2,
           voteCount: parseInt(question.option2_total),
+          percentage: (parseInt(question.option2_total) / (parseInt(question.option1_total) + parseInt(question.option2_total)) * 100).toFixed(2),
         },
       ],
       author: {
