@@ -4,7 +4,7 @@
   "description": "A simple WouldYouRather generator from either.io",
   "main": "index.js",
   "engines": {
-    "node": ">= 12"
+    "node": ">=12.18"
   },
   "scripts": {},
   "repository": {
@@ -16,8 +16,7 @@
     "wouldyourather",
     "would-you-rather",
     "either.io",
-    "either",
-    "cheerio"
+    "either"
   ],
   "author": "Xaliks",
   "license": "MIT",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/Xaliks/Would-You-Rather#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "node-fetch": "^2.6.1"
+    "undici": "^5.15.1"
   }
 }

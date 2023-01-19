@@ -2,62 +2,105 @@
 
 ## Usage
 
+JavaScript
 ```javascript
-const WYR = require("either-wyr");
+const WouldYouRather = require("either-wyr");
 
-WYR({ comments: true }).then(console.log); // { ..., comments: [{}, {}, {}] }
-WYR().then(console.log); // { ... }
+WouldYouRather({ count: 3 }).then(console.log); // [Question, Question, Question]
+WouldYouRather().then(console.log); // [Question]
+
 ```
 
-## Response
+## Question
 
-```json
+```javascript
 {
-  "title": "Title",
-  "description": "Description",
-  "author": "Author",
-  "questions": [
+  id: Number,
+  slug: String,
+  isAdult: Boolean,
+  title: String,
+  description: String | null,
+  sentence: String,
+  url: String,
+  shortUrl: String,
+  commentCount: Number,
+  createdAt: Date,
+  updatedAt: Date,
+  options: [
     {
-      "type": "blue",
-      "question": "Question 1",
-      "votes": 123456,
-      "percentage": "35.98"
+      type: "blue",
+      question: String,
+      voteCount: Number
     },
     {
-      "type": "red",
-      "question": "Question 2",
-      "votes": 123456,
-      "percentage": "64.02"
+      type: "red",
+      question: String,
+      voteCount: Number
     }
   ],
-  "total_votes": 123456,
-  "tag": "Travel",
-  "comments": [
+  author: {
+    id: Number,
+    name: String,
+    isDeleted: Boolean,
+    url: String,
+    email: String | null
+  },
+  tags: [
     {
-      "question_type": "blue",
-      "text": "text",
-      "author": {
-        "username": "author",
-        "avatar": "URL",
-        "url": "URL"
-      },
-      "likes": 123456,
-      "timestamp": "10 years ago",
-      "replies": [
-        {
-          "question_type": "red",
-          "text": "text",
-          "author": {
-            "username": "author",
-            "avatar": "URL",
-            "url": "URL"
-          },
-          "likes": 123456,
-          "timestamp": "10 years ago"
-        }
-      ]
+      id: Number,
+      name: String,
+      slug: String,
+      url: String,
+      createdAt: Date,
     }
   ]
 }
+```
+
+#### Example reponse
+```json
+[
+	{
+		"id": 123,
+		"isAdult": false,
+		"title": "LOL",
+		"description": null,
+		"sentence": "Would you rather be very fat or be very thin?",
+		"url": "http://either.io/123/fat-thin",
+		"slug": "fat-thin",
+		"shortUrl": "http://wyr.be/bG1hbw",
+		"commentCount": 1337,
+		"createdAt": "2009-10-08T20:22:43.000Z",
+		"updatedAt": "2009-10-08T22:05:30.000Z",
+		"options": [
+			{
+				"type": "blue",
+				"question": "Be very fat",
+				"voteCount": 123456
+			},
+			{
+				"type": "red",
+				"question": "Be very thin",
+				"voteCount": 123456
+			}
+		],
+		"author": {
+			"id": 123987,
+      "isDeleted": false,
+			"name": "Xaliks",
+			"url": "http://either.io/user/123987",
+			"email": "email@lol.com"
+		},
+		"tags": [
+			{
+				"id": 8,
+				"name": "Sex",
+				"url": "http://either.io/tags/11/sex",
+				"slug": "sex",
+				"createdAt": "2012-01-10T16:22:33.000Z"
+			}
+		]
+	}
+]
 
 ```
