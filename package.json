@@ -6,7 +6,9 @@
   "engines": {
     "node": ">=12.18"
   },
-  "scripts": {},
+  "scripts": {
+		"format": "eslint . --ext .js,.json --fix"
+	},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Xaliks/Would-You-Rather.git"
@@ -26,5 +28,9 @@
   "homepage": "https://github.com/Xaliks/Would-You-Rather#readme",
   "dependencies": {
     "undici": "^5.15.1"
+  },
+  "devDependencies": {
+    "@xaliksss/eslint-config": "^1.0.0",
+    "eslint": "^8.32.0"
   }
 }
