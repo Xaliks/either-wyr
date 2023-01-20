@@ -1,14 +1,14 @@
 {
   "name": "either-wyr",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple WouldYouRather generator from either.io",
   "main": "index.js",
   "engines": {
     "node": ">=12.18"
   },
   "scripts": {
-		"format": "eslint . --ext .js,.json --fix"
-	},
+    "format": "eslint . --ext .js,.json --fix"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Xaliks/Would-You-Rather.git"
